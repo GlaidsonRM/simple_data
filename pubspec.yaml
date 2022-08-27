@@ -1,6 +1,6 @@
 name: simple_data
 description: Package para simples transações com banco de dados local.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/GlaidsonRM/simple_data
 
 environment:
