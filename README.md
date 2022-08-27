@@ -2,6 +2,8 @@
 
 A simple database derived from Get_Storage, creating CRUD for small applications.
 
+## Example for Add or Update value
+
 ```dart
   void _addOrUpdateData() {
   final entityExample = EntityExample(
