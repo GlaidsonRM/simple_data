@@ -9,11 +9,13 @@ class SimpleDataTransactions {
 
   static bool saveOrUpdateData({
     required String tableName,
-    required String id,
+    required dynamic id,
     required Map<String, dynamic> value,
   }) {
     try {
       var itens = box.read(tableName);
+
+      id = id.toString();
 
       if (itens != null) {
         final itemExist = itens[tableName][id];
@@ -42,7 +44,10 @@ class SimpleDataTransactions {
     required String tableName,
   }) {
     var itens = box.read(tableName);
-    return itens[tableName];
+    if(itens != null) {
+      return itens[tableName];
+    }
+    return null;
   }
 
   static dynamic findById({
@@ -50,18 +55,40 @@ class SimpleDataTransactions {
     required String id,
   }) {
     var itens = box.read(tableName);
+    if(itens != null) {
+      return itens[tableName];
+    }
     return itens[tableName][id];
   }
 
   static bool deleteAll({
     required String tableName,
   }) {
+    box.remove(tableName);
     return true;
   }
 
   static bool deleteById({
     required String tableName,
+    required dynamic id,
   }) {
-    return true;
+    try {
+      var itens = box.read(tableName);
+
+      id = id.toString();
+
+      if (itens != null) {
+        final itemExist = itens[tableName][id];
+
+        if (itemExist != null) {
+          itens[tableName].removeWhere((key, value) => key == id);
+        }
+      }
+      box.write(tableName, itens);
+
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 }

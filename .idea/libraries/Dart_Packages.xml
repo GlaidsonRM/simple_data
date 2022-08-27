@@ -212,13 +212,6 @@
             </list>
           </value>
         </entry>
-        <entry key="simple_data">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="sky_engine">
           <value>
             <list>
@@ -329,7 +322,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/win32-2.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0+2/lib" />
-      <root url="file://$PROJECT_DIR$/../lib" />
       <root url="file://$PROJECT_DIR$/../../../SDK/stable/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../../SDK/stable/packages/flutter/lib" />
       <root url="file://$PROJECT_DIR$/../../../SDK/stable/packages/flutter_test/lib" />
